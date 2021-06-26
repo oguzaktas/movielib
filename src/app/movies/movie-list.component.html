@@ -3,11 +3,10 @@
     {{pageTitle}}
   </div>
   <div class='card-body'>
-    <div class='row'>
-      <div class='col-md-2'>Filter by:</div>
-      <div class='col-md-4'>
-        <input type='text'
-               [(ngModel)]='listFilter' />
+    <div class='row' id="search">
+      <div class="form-group has-search">
+        <span class="fa fa-search form-control-feedback"></span>
+        <input type="text" class="form-control" placeholder="Search" [(ngModel)]='listFilter'>
       </div>
     </div>
     <div class='row'
@@ -21,18 +20,19 @@
              *ngIf='movies.length'>
         <thead>
           <tr>
-            <th>
-              <button class='btn btn-primary'
+            <th class='imageBtn'>
+              <button class='btn btn-primary' 
+                      style='white-space: nowrap;'
                       (click)='toggleImage()'>
-                {{showImage ? 'Hide' : 'Show'}} Image
+                {{showImage ? 'Hide' : 'Show'}} Poster
               </button>
             </th>
-            <th>Name</th>
-            <th>Year</th>
-            <th>Title Type</th>
-            <th>Director</th>
-            <th>IBDb Rating</th>
-            <th>Date Watched</th>
+            <th><a [routerLink]='' (click)='sortByName()'>Name</a></th>
+            <th><a [routerLink]='' (click)='sortByYear()'>Year</a></th>
+            <th><a [routerLink]='' (click)='sortByTitleType()'>Title Type</a></th>
+            <th><a [routerLink]='' (click)='sortByDirector()'>Director</a></th>
+            <th><a [routerLink]='' (click)='sortByIMDbRating()'>IBDb Rating</a></th>
+            <th><a [routerLink]='' (click)='sortByDateWatched()'>Date Watched</a></th>
           </tr>
         </thead>
         <tbody>
@@ -54,10 +54,10 @@
             <td>{{ movie.director }}</td>
             <td>
               <pm-star [rating]='movie.imdbRating'
-                       (ratingClicked)='onRatingClicked($event)'>
+                       (ratingClicked)='onRatingClicked(movie.name, $event)'>
               </pm-star>
             </td>
-            <td></td>
+            <td>{{ movie.dateWatched }}</td>
           </tr>
         </tbody>
       </table>

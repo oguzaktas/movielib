@@ -10,17 +10,13 @@ import { IMovie } from './movies';
 export class MovieService {
   // If using Stackblitz, replace the url with this line
   // because Stackblitz can't find the api folder.
-  // private movieUrl = 'assets/movies/movies.json';
-  private movieUrl = 'http://localhost:8080/api/movies';
+  // private movieUrl = 'assets/movies/movies.json'; // mock data
+  private movieUrl = 'https://movielib-api.herokuapp.com/api/movies';
 
   constructor(private http: HttpClient) { }
 
   getMovies(): Observable<IMovie[]> {
-    return this.http.get<IMovie[]>(`${this.movieUrl}`)
-      .pipe(
-        tap(data => console.log('All: ', JSON.stringify(data))),
-        catchError(this.handleError)
-      );
+    return this.http.get<IMovie[]>(`${this.movieUrl}`);
   }
 
   // Get one movie

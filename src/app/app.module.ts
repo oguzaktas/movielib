@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
 import { MovieModule } from './movies/movie.module';
+import { RatingsUploadModule } from './ratings-upload/ratings-upload.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,7 +21,8 @@ import { MovieModule } from './movies/movie.module';
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ]),
-    MovieModule
+    MovieModule,
+    RatingsUploadModule
   ],
   bootstrap: [AppComponent]
 })

@@ -16,10 +16,6 @@
           <div class='col-md-8'>{{movie.year | lowercase | convertToSpaces: '-'}}</div>
         </div>
         <div class='row'>
-          <div class='col-md-4'>Date Watched:</div>
-          <div class='col-md-8'>{{movie.dateWatched}}</div>
-        </div>
-        <div class='row'>
           <div class='col-md-4'>Title Type:</div>
           <div class='col-md-8'>{{movie.titleType}}</div>
         </div>
@@ -28,18 +24,63 @@
           <div class='col-md-8'>{{movie.director}}</div>
         </div>
         <div class='row'>
-          <div class='col-md-4'>5 Star Rating:</div>
+          <div class='col-md-4'>IMDb Rating:</div>
           <div class='col-md-8'>
-            <pm-star [rating]='movie.imdbRating'>
-            </pm-star>
+              <pm-star [rating]='movie.imdbRating'
+                       (ratingClicked)='onRatingClicked(movie.name, $event)'>
+              </pm-star>
           </div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Your Rating:</div>
+          <div class='col-md-8'>
+              <pm-star [rating]='movie.yourRating'
+                       (ratingClicked)='onRatingClicked(movie.name, $event)'>
+              </pm-star>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Runtime:</div>
+          <div class='col-md-8'>{{movie.runtime}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Date Watched:</div>
+          <div class='col-md-8'>{{movie.dateWatched}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Genres:</div>
+          <div class='col-md-8'>{{movie.genres}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Country:</div>
+          <div class='col-md-8'>{{movie.country}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Language:</div>
+          <div class='col-md-8'>{{movie.language}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Awards:</div>
+          <div class='col-md-8'>{{movie.awards}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Production Companies:</div>
+          <div class='col-md-8'>{{movie.productionCompanies}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Number of Votes:</div>
+          <div class='col-md-8'>{{movie.numVotes}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>IMDb URL:</div>
+          <div class='col-md-8'><a [href]="movie.imdbUrl" target="_blank">{{movie.imdbUrl}}</a></div>
         </div>
       </div>
 
       <div class='col-md-4'>
         <img class='center-block img-responsive'
-             [style.width.px]='200'
-             [style.margin.px]='2'
+             [style.width.px]='250'
+             [style.margin.px]='4'
              [src]='movie.imageUrl'
              [title]='movie.name'>
       </div>

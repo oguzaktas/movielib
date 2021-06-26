@@ -36,4 +36,8 @@ export class MovieDetailComponent implements OnInit {
   onBack(): void {
     this.router.navigate(['/movies']);
   }
+
+  onRatingClicked(name: string, message: string): void {
+    document.getElementsByClassName('card-header')[0].innerHTML = 'Movie Detail: ' + name + ' ' + message;
+  }
 }
