@@ -1115,7 +1115,7 @@ class RatingsUploadComponent {
     }
 }
 RatingsUploadComponent.ɵfac = function RatingsUploadComponent_Factory(t) { return new (t || RatingsUploadComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_ratings_upload_service__WEBPACK_IMPORTED_MODULE_2__["RatingsUploadService"])); };
-RatingsUploadComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: RatingsUploadComponent, selectors: [["pm-ratings-upload"]], decls: 14, vars: 0, consts: [[1, "col-md-6", "offset-md-2", "mt-2"], ["target", "_blank", "href", "https://www.imdb.com/"], ["src", "../../assets/images/imdb.png"], [1, "row-md-6"], ["accept-charset", "UTF-8", "method", "POST"], [1, "form-group", "mt-3"], [1, "mr-2"], ["type", "file", "name", "file", "accept", ".csv"], ["type", "submit", 1, "btn", "btn-primary"]], template: function RatingsUploadComponent_Template(rf, ctx) { if (rf & 1) {
+RatingsUploadComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: RatingsUploadComponent, selectors: [["pm-ratings-upload"]], decls: 14, vars: 0, consts: [[1, "col-md-6", "offset-md-2", "mt-2"], ["target", "_blank", "href", "https://www.imdb.com/"], ["src", "../../movielib/assets/images/imdb.png"], [1, "row-md-6"], ["accept-charset", "UTF-8", "method", "POST"], [1, "form-group", "mt-3"], [1, "mr-2"], ["type", "file", "name", "file", "accept", ".csv"], ["type", "submit", 1, "btn", "btn-primary"]], template: function RatingsUploadComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "a", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "img", 2);
