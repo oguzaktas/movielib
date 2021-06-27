@@ -1,27 +1,7 @@
 # Movie Library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+Movie Library is a simple movie catalog to list, filter, search, display details of previously watched movies, TV series, TV shows and documentaries. It works with a CSV file that can be exported on IMDb profile.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Issues
+- IMDb ratings CSV upload and send to the Spring Boot REST API located in Heroku does not work properly.
+- Heroku doesn't show French and Spanish characters. UTF-8 encoding should be set.
